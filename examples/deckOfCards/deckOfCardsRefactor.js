@@ -10,10 +10,10 @@ const values = [
     'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'
 ];
 
-const suit = 'suit';
-const value = 'value';
+const cardTupleDefinition = ['suit', 'value'];
 
-const cardTupleDefinition = [suit, value];
+const [suit, value] = cardTupleDefinition;
+
 
 function getPropertyIndex(propertyName) {
     return cardTupleDefinition.indexOf(propertyName);

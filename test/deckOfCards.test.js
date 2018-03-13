@@ -1,7 +1,7 @@
 'use strict';
 
 const { prettyJson } = require('./utils/utils');
-const deckOfCards = require('../examples/deckOfCards/deckOfCardsRefactor');
+const deckOfCards = require('../examples/deckOfCards/deckOfCardsFullRefinement');
 
 require('./utils/approvals-config');
 

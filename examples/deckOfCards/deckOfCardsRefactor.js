@@ -1,6 +1,6 @@
 'use strict';
 
-const setCombinator = require('./setCombinator');
+const arrayCombinator = require('../utils/arrayCombinator');
 
 const suits = [
     'Hearts', 'Clubs', 'Diamonds', 'Spades'
@@ -10,9 +10,9 @@ const values = [
     'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'
 ];
 
-const cardTupleDefinition = ['suit', 'value'];
+const cardTupleDefinition = ['suit', 'faceValue'];
 
-const [suit, value] = cardTupleDefinition;
+const [suit, faceValue] = cardTupleDefinition;
 
 
 function getPropertyIndex(propertyName) {
@@ -27,17 +27,17 @@ function getCardProperty(propertyName) {
 }
 
 const getSuit = getCardProperty(suit);
-const getValue = getCardProperty(value);
+const getFaceValue = getCardProperty(faceValue);
 
 function buildCard(cardTuple) {
     return {
         suit: getSuit(cardTuple),
-        value: getValue(cardTuple)
+        faceValue: getFaceValue(cardTuple)
     };
 }
 
 function buildDeck() {
-    return setCombinator
+    return arrayCombinator
         .combineValues(suits, values)
         .map(buildCard);
 }

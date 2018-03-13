@@ -4,14 +4,14 @@ const suits = [
     'Hearts', 'Clubs', 'Diamonds', 'Spades'
 ];
 
-const values = [
+const faceValues = [
     'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'
 ];
 
-function buildCard(suit, value) {
+function buildCard(suit, faceValue) {
     return {
         suit: suit,
-        value: value
+        faceValue: faceValue
     };
 }
 
@@ -19,8 +19,8 @@ function buildDeck() {
     let deck = [];
 
     for (let i = 0; i < suits.length; i++) {
-        for (let j = 0; j < values.length; j++) {
-            deck.push(buildCard(suits[i], values[j]));
+        for (let j = 0; j < faceValues.length; j++) {
+            deck.push(buildCard(suits[i], faceValues[j]));
         }
     }
 

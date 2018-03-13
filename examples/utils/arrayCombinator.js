@@ -18,13 +18,13 @@
         (...args) =>
             args.reduce(combineSets, [[]]);
 
-    const setCombinator = {
+    const arrayCombinator = {
         combineValues: combineValues
     };
 
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-        module.exports = setCombinator;
+        module.exports = arrayCombinator;
     } else {
-        window.setCombinator = setCombinator;
+        window.setCombinator = arrayCombinator;
     }
 })();
